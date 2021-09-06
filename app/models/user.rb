@@ -15,6 +15,11 @@ class User < ApplicationRecord
       SecureRandom.urlsafe_base64
     end
 
+  class << self
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+
   # Returns the hash digest of the given string.
   def digest string
     cost = if ActiveModel::SecurePassword.min_cost
