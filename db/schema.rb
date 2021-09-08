@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_07_090935) do
+ActiveRecord::Schema.define(version: 2021_09_08_083455) do
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2021_09_07_090935) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
 end
